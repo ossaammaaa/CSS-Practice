@@ -1,0 +1,464 @@
+
+/* ------------------------- Reset ------------------------- */
+* {
+    margin: 0px;
+  }
+  
+  /* ------------------------- UTILs ------------------------- */
+  .container {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;   
+     
+  }
+  .img{
+    
+    padding: 0px 0px ;
+    margin-bottom: -25px;
+ 
+}
+  .container--sm {
+    max-width: 600px;
+  }
+  
+  /* ------------------------- Header ------------------------- */
+  .header {
+    background-color:#131921;
+    color: white;
+
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @media (max-width: 600px) {
+    nav {
+      display: none;
+    }
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    padding-left: 16px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: rgba(255, 166, 0, 0.712)
+  }
+  
+  /* ------------------------- Burger Menu ------------------------- */
+  .mobile-nav {
+    /* In Desktop */
+    display: none;
+    cursor: pointer;
+    align-self: stretch;
+    align-items: center;
+  }
+  
+  @media (max-width: 600px) {
+    .mobile-nav {
+      display: flex;
+    }
+  }
+  
+  .burger-menu {
+    width: 30px;
+    border-bottom: 2px solid white;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .burger-menu::after {
+    width: 30px;
+    content: "";
+    border-bottom: 2px solid white;
+    position: absolute;
+    top: -10px;
+  }
+  
+  .burger-menu::before {
+    width: 25px;
+    content: "";
+    border-bottom: 2px solid white;
+    position: absolute;
+    top: 10px;
+  }
+  
+  .open .burger-menu {
+    border-color: transparent;
+    transform: rotate(270deg);
+  }
+  
+  .open .burger-menu::after {
+    transform: rotate(45deg) translate(6px, 9px);
+  }
+  
+  .open .burger-menu::before {
+    width: 30px;
+    transform: rotate(-45deg) translate(4px, -8px);
+  }
+  
+  .mobile-nav + ul {
+    list-style: none;
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    top: 48px;
+    padding: 0;
+    background-color: gray;
+    width: 100%;
+    height: calc(100vh - 48px);
+    transform: translateX(100vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    /* transition: transform 0.2s ease-in-out; */
+
+  }
+  
+  .mobile-nav + ul li {
+    margin-bottom: 50px;
+  }
+  
+  .mobile-nav + ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  
+  .mobile-nav + ul.open {
+    transform: translateX(0);
+  }
+  
+  /* ------------------------- Hero Sectio ------------------------- */
+  .hero-section {
+    background-color: white;
+    
+    
+
+}
+.herobackground{
+    background-image: url(products.jpg.webp);
+background-repeat: no-repeat;
+background-size: cover;
+
+background-attachment:scroll;
+display: flex;
+background-size: 710px; 
+width: 100%;
+background-position-y: bottom;
+align-content: center;
+/* margin-left: 150px; */
+background-position-x:center ;
+
+
+
+
+
+
+}
+  
+  .hero__content {
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+   
+  }
+  
+  .hero__content h2 {
+    font-size: 35px;
+    font-weight: 100;
+    padding-bottom: 10px;
+  background-color: rgb( 216);
+    opacity: 0.9; 
+    
+    color: whitesmoke;
+ 
+  }
+  
+  .hero__content p { margin: right 200px; 
+    padding-bottom: 20px;
+    font-size: 18.5px;
+    line-height: 28px;
+    text-align: center;
+    color: whitesmoke;
+    background-color: rgb(216);
+    opacity: 0.8;
+  }
+  
+  .btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .btn {
+    border-radius: 10px;
+    outline: none;
+    padding: 7px 15px;
+   
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+   border-color:rgb(157, 169, 236)
+  }
+  
+  .btn--main {
+    background-color: black;
+    opacity: 0.8;
+  }
+  
+  .btn--main:hover {
+    background-color: rgba(255, 166, 0, 0.712)
+  }
+  
+  .btn--secondary {
+    background-color:  rgb(0, 0, 0);
+    opacity: 0.8;
+
+  }
+  
+  .btn--secondary:hover {
+    background-color:rgba(255, 166, 0, 0.712)
+  }
+  
+  /* ------------------------- Products Sectio ------------------------- */
+  .products-section {
+    background-color: rgb(235, 233, 233);
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px 0;
+  }
+  
+  .product {
+    width: 31%;
+    border-radius: 7px;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.488);
+    margin-bottom: 15px;
+  }
+  
+  .product:hover {
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.715);
+  }
+  
+  .product:hover .product__img {
+    transform: scale(1.1);
+  }
+  
+  /* Tablet */
+  @media (max-width: 768px) {
+    .product {
+      width: 48%;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 600px) {
+    .product {
+      width: 100%;
+    }
+  }
+  
+  .product__img {
+    height: 190px;
+    background-image: url("14promax.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    transition: transform 0.2s ease-in-out;
+  }
+  .product__img1{
+    height: 190px;
+    background-image: url("iphone-13-pro-max.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:0px;
+    transition: transform 0.2s ease-in-out;
+  }
+  .product__img2 {
+    height: 190px;
+    background-image: url("iphone11.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    transition: transform 0.2s ease-in-out;
+  }
+  .product__img3 {
+    height: 180px;
+    background-image: url("iphone\ 12promax.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    transition: transform 0.2s ease-in-out;
+  }
+  .product__img4 {
+    height: 180px;
+    background-image: url("applewatch.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  .product__img5 {
+    height: 180px;
+    background-image: url("airpods.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    transition: transform 0.2s ease-in-out;
+  }
+  .product__body {
+    background-color: white;
+    padding: 10px;
+  }
+  
+  .product__fotter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+  }
+  
+  .product__btns {
+    display: flex;
+  }
+  
+  .product__btns button {
+    
+    background-color: black;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid rgba(106, 106, 106, 0.784);
+    border-color: rgba(255, 166, 0, 0.712);
+    padding: 3px 5px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .product__btns button:first-child {
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+  }
+  
+  .product__btns button:last-child {
+    border-radius: 0 5px 5px 0;
+    border-color: rgba(255, 166, 0, 0.712);
+  }
+  
+  .product__btns button:hover {
+    color:white;
+    background-color:#131921;
+  }
+  footer {
+    width: 100%;
+    height: auto;
+    background: #131921;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+
+
+}
+
+footer h2 {
+    text-align: center;
+    
+    margin-top: 25px;
+    margin-bottom: 30px;
+    padding: 70px;
+    /* line-height: 30px; */
+    font-size: 35px;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    
+    
+
+}
+footer h2 span{
+    text-decoration: line-through;
+}
+
+
+/* footer .input {
+    border-radius: 20px;
+} */
+
+footer .input input {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 20px 0px 0px 20px;
+}
+footer .input button {
+    padding: 12px 15px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    background-color:#02316f61;
+    border-radius: 0px 20px 20px 0px;
+    color:white;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+
+footer .input button:hover {
+
+    color: rgba(255, 166, 0, 0.712);
+    background-color: #062b5f;
+  }
+  
+
+
+footer ul {
+    list-style: none;
+    display: flex;
+    /* align-items: center; */
+    margin-top: 30px;
+}
+
+footer ul li {
+    text-align: center;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+footer ul li h6 {
+    font-size: 11px;
+    font-weight: 600;
+    max-width: 120px;
+    margin: 0;
+    line-height: 18px;
+    border-top: 1px solid #000;
+    padding-top: 3px;
+}
+  
